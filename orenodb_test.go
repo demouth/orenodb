@@ -4,6 +4,7 @@ import (
 	"strconv"
 	"sync"
 	"testing"
+	"time"
 
 	"github.com/gomodule/redigo/redis"
 )
@@ -24,6 +25,8 @@ func TestRedigo(t *testing.T) {
 	}
 	conn.Close()
 	s.Stop()
+
+	time.Sleep(1 * time.Second)
 }
 
 func TestRedigoConcurrent(t *testing.T) {
@@ -43,6 +46,8 @@ func TestRedigoConcurrent(t *testing.T) {
 	conn1.Close()
 	conn2.Close()
 	s.Stop()
+
+	time.Sleep(1 * time.Second)
 }
 
 func TestRedigoParallel(t *testing.T) {
@@ -66,6 +71,8 @@ func TestRedigoParallel(t *testing.T) {
 
 	wg.Wait()
 	s.Stop()
+
+	time.Sleep(1 * time.Second)
 }
 
 func TestTokenizeBulkStrings(t *testing.T) {
