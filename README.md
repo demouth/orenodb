@@ -2,9 +2,13 @@
   <img src="logo2.png" width="80">
   <br>
   <img src="logo.png" width="200">
+  <br>
+  <a href="https://travis-ci.org/demouth/orenodb"><img src="https://travis-ci.org/demouth/orenodb.svg?branch=master" alt="Build Status"></a>
 
   <p align="center">OrenoDB is dataBase server implementation for learning. OrenoDB means MyDB in Japanese.</p>
+
 </p>
+
 
 ----------------------
 
